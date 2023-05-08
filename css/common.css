@@ -131,7 +131,6 @@ body {
 
 .tab {
     flex: 1;
-    background-color: #eee;
 }
 
 .tab_title {
@@ -152,7 +151,7 @@ body {
 .tab_title a {
     display: block;
     flex: 1;
-    background-color: #ccc;
+    background-color: #ddd;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -177,6 +176,7 @@ body {
 
 .tab_contents .notice {
     padding: 10px;
+    display: block;
 }
 
 .tab_contents .notice li a {
@@ -184,18 +184,123 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 4px 0;
+}
+
+.tab_contents .notice li a:hover {
+    text-decoration: underline;
 }
 
 .tab_contents .gallery {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    padding: 20px 10px;
     display: none;
+}
+
+.tab_contents .gallery li {
+    background-color: red;
+}
+
+.tab_contents .gallery img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 .banner {
     flex: 1;
-    background-color: #ddd;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .link {
     flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.link a {
+    display: block;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.link a:hover {
     background-color: #eee;
 }
+
+/* footer */
+.footer {
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.sns {
+    display: flex;
+    gap: 16px;
+}
+
+.sns a {
+    display: block;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+.sns a:hover {
+    background-color: #ccc;
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 460px;
+    background-color: #fff;
+    border: 1px solid #666;
+    padding: 50px 40px;
+}
+
+.modal h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.modak p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.modal .close {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+}
+
+
