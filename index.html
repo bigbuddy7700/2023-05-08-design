@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUST 쇼핑몰</title>
+    <script src="./js/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
@@ -67,7 +68,7 @@
                 </div>
                 <div class="tab_contents">
                     <ul class="notice">
-                        <li><a href="#">2021년 2월 무이자 할부 카드안내 2021년 2월 무이자 할부 카드안내</a></li>
+                        <li><a class="show_modal" href="#">2021년 2월 무이자 할부 카드안내 2021년 2월 무이자 할부 카드안내</a></li>
                         <li><a href="#">2021년 2월 무이자 할부 카드안내</a></li>
                         <li><a href="#">쿠폰 다운로드 및 사용방법</a></li>
                         <li><a href="#">모바일 앱 설치하고 10% 할인쿠폰 받자!! 2021년 2월 무이자 할부 카드안내</a></li>
@@ -107,5 +108,19 @@
         <p>그리워 어머니, 슬퍼하는 없이 이름자 토끼, 이네들은 어머니 까닭입니다. 가난한 이 이국 까닭입니다. 쉬이 잠, 그러나 토끼, 까닭입니다. 이름자 밤을 새겨지는 다 까닭이요, 풀이 당신은 듯합니다. 별 언덕 새겨지는 밤을 둘 있습니다. 쓸쓸함과 가득 못 이런 다 봄이 내일 보고, 무엇인지 있습니다. 헤일 북간도에 하늘에는 사랑과 없이 보고, 이국 경, 계십니다. 밤이 가을 마리아 언덕 어머니, 계십니다. 비둘기, 하늘에는 다 까닭입니다. 비둘기, 아스라히 시인의 이름자를 버리었습니다.</p>
         <a class="close" href="#">닫기</a>
     </div>
+
+    <script>
+        $(function(){
+            console.log('.show_modal')
+
+            $('.show_modal').click(function(){
+                $('.modal').addClass('active')
+            })
+
+            $('.close').click(function(){
+                $('.modal').removeClass('active')
+            })
+        })
+    </script>
 </body>
 </html>
